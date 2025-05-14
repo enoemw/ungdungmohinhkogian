@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Diện Tích Hình 3D</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tính Diện Tích Hình 3D</h1>
+    </header>
+    <div class="container">
+        <!-- Hình chóp tam giác -->
+        <div class="shape">
+            <h2>Hinh Chop Tam Giac</h2>
+            <div class="input-group">
+                <label for="pyramid-base">Canh day (m):</label>
+                <input type="number" id="pyramid-base" min="0" step="0.1" placeholder="Nhap canh day">
+            </div>
+            <div class="input-group">
+                <label for="pyramid-height">Chieu cao (m):</label>
+                <input type="number" id="pyramid-height" min="0" step="0.1" placeholder="Nhap chieu cao">
+            </div>
+            <button onclick="calculatePyramid()">Tinh Dien Tich</button>
+            <div class="result" id="pyramid-result">Dien tich: -- m²</div>
+            <div class="canvas" id="pyramid-canvas"></div>
+        </div>
+
+        <!-- Hình lập phương -->
+        <div class="shape">
+            <h2>Hinh Lap Phuong</h2>
+            <div class="input-group">
+                <label for="cube-edge">Canh (m):</label>
+                <input type="number" id="cube-edge" min="0" step="0.1" placeholder="Nhap canh">
+            </div>
+            <button onclick="calculateCube()">Tinh Dien Tich</button>
+            <div class="result" id="cube-result">Dien tich: -- m²</div>
+            <div class="canvas" id="cube-canvas"></div>
+        </div>
+
+        <!-- Hình hộp chữ nhật -->
+        <div class="shape">
+            <h2>Hinh Hop Chu Nhat</h2>
+            <div class="input-group">
+                <label for="box-length">Chieu dai (m):</label>
+                <input type="number" id="box-length" min="0" step="0.1" placeholder="Nhap chieu dai">
+            </div>
+            <div class="input-group">
+                <label for="box-width">Chieu rong (m):</label>
+                <input type="number" id="box-width" min="0" step="0.1" placeholder="Nhap chieu rong">
+            </div>
+            <div class="input-group">
+                <label for="box-height">Chieu cao (m):</label>
+                <input type="number" id="box-height" min="0" step="0.1" placeholder="Nhap chieu cao">
+            </div>
+            <button onclick="calculateBox()">Tinh Dien Tich</button>
+            <div class="result" id="box-result">Dien tich: -- m²</div>
+            <div class="canvas" id="box-canvas"></div>
+        </div>
+    </div>
+
+    <!-- Thư viện Three.js cục bộ -->
+    <script src="three.min.js"></script>
+    <script src="OrbitControls.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
